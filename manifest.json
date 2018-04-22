@@ -1,0 +1,22 @@
+{
+  "name": "retinaImage",
+  "version": "1.1.0",
+  "manifest_version": 3,
+  "description": "在retina屏幕上显示高清图",
+  "browser_action": {
+    "default_title": "retina",
+    "default_icon": "icon.png"
+  },
+  "background": { "scripts": ["background.js"] },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_end"
+    }
+  ]
+}
